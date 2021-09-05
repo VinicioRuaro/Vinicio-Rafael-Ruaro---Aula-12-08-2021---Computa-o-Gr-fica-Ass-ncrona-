@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1000" height="200"></canvas>
+    <script>
+      
+        
+      function drawRectangle(myRectangle, context) {
+        context.beginPath();
+        context.rect(myRectangle.x, myRectangle.y, myRectangle.width, myRectangle.height);
+        context.fillStyle = 'gray';
+        context.fill();
+        context.strokeStyle = 'black';
+        context.stroke();
+      }
+
+      function drawRectangle2(myRectangle, context) {
+        context.beginPath();
+        context.rect(myRectangle.x, myRectangle.y, myRectangle.width, myRectangle.height);
+        context.fillStyle = 'white';
+        context.fill();
+        context.strokeStyle = 'black';
+        context.stroke();
+      }
+      
+
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      var myRectangle = {
+        x: 0,
+        y: 0,
+        width: 0,
+        height: 0,
+        borderWidth: 5
+      };
+
+      var myRectangle1 = {
+        x:  1,
+        y: 1,
+        width: 1,
+        height: 1,
+        borderWidth: 15
+      };
+
+      var myRectangle2 = {
+        x: 3,
+        y: 3,
+        width: 3,
+        height: 3,
+        borderWidth: 15
+      };
+
+      var myRectangle3 = {
+        x: 6,
+        y: 6,
+        width: 6,
+        height: 6,
+        borderWidth: 15
+      };
+      
+      var myRectangle4 = {
+        x: 10,
+        y: 10,
+        width: 10,
+        height: 10,
+        borderWidth: 15
+      };
+
+      var myRectangle5 = {
+        x: 15,
+        y: 15,
+        width: 15,
+        height: 15,
+        borderWidth: 15
+      };
+
+      var myRectangle6 = {
+        x: 21,
+        y: 21,
+        width: 21,
+        height: 21,
+        borderWidth: 15
+      };
+
+      var myRectangle7 = {
+        x: 28,
+        y: 28,
+        width: 28,
+        height: 28,
+        borderWidth: 15
+      };
+
+      var myRectangle8 = {
+        x: 36,
+        y: 36,
+        width: 36,
+        height:  36,
+        borderWidth: 15
+      };
+
+      var myRectangle9 = {
+        x: 45,
+        y: 45,
+        width: 45,
+        height: 45,
+        borderWidth: 15
+      };
+
+      var myRectangle10 = {
+        x: 55,
+        y: 55,
+        width: 55,
+        height: 55,
+        borderWidth: 15
+      };
+
+      var myRectangle11 = {
+        x: 66,
+        y: 66,
+        width: 66,
+        height: 66,
+        borderWidth: 10
+      };
+      
+      var myRectangle12 = {
+        x: 95,
+        y: 113,
+        width: 5,
+        height: 5,
+        borderWidth: 10
+      };
+
+      var myRectangle13 = {
+        x: 113,
+        y: 95,
+        width: 5,
+        height: 5,
+        borderWidth: 10
+      };
+     
+      drawRectangle(myRectangle, context);
+      drawRectangle(myRectangle2, context);
+      drawRectangle(myRectangle1, context);
+      
+      drawRectangle(myRectangle4, context); 
+      drawRectangle(myRectangle3, context);
+      
+      drawRectangle(myRectangle6, context);
+      drawRectangle(myRectangle5, context);
+      
+      drawRectangle(myRectangle8, context);
+      drawRectangle(myRectangle7, context);
+      
+      drawRectangle(myRectangle10, context);
+      drawRectangle(myRectangle9, context);
+
+      drawRectangle(myRectangle11,context)
+      drawRectangle2(myRectangle12,context)
+      drawRectangle2(myRectangle13,context)
+      // wait one second before starting animation
+      setTimeout(function() {
+        var startTime = (new Date()).getTime();
+        animate(myRectangle, canvas, context, startTime);
+      }, 10);
+    </script>
+</html>   
